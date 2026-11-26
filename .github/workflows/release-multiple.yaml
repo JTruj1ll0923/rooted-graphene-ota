@@ -7,6 +7,9 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    additional-env:
+      description: Additional env var key value pairs, space separated, e.g. "A=1 B=2"
+      default: ''
 
   # Allows calling from release action
   workflow_call:
@@ -33,3 +36,4 @@ jobs:
     with:
       device-id: ${{ matrix.device-id }}
       magisk-preinit-device: ${{ matrix.magisk-preinit-device }}
+      additional-env: ${{ inputs.additional-env }}

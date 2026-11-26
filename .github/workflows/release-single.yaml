@@ -8,6 +8,9 @@ on:
       magisk-preinit-device:
         type: string
         default: ''
+      additional-env:
+        type: string
+        default: ''
   
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
