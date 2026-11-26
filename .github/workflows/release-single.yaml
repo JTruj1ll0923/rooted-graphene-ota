@@ -55,7 +55,7 @@ on:
 jobs:
   build-device:
     runs-on: ubuntu-latest
-    timeout-minutes: 20 # Make sure to not waste hours when some command does not return 
+    timeout-minutes: 40 # 4x1.8GB asset uploads push a 20m cap; ponytail: raise further if a slow runner day bites
     steps:
       - name: Checkout rooted-graphene script repository
         uses: actions/checkout@v4
